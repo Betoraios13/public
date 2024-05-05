@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=], initial-scale=1.0">
+    <title>JA Interface</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="PageCodes.css">
+</head>
+    <body>
+
+        <div id="Nave">
+            <ul>
+                <li id="l1">
+                    <a href="hindex.html">LAR</a>
+                </li>
+                <li id="l2">
+                    <a href="ProjectsPage.html">PROJETOS</a>
+                </li>
+                <li id="l3">
+                    <a href="CodesPage.html">CÓDIGOS</a>
+                </li>
+            </ul>
+        </div>
+
+        <header>
+            <div class="cabeca">
+                <h1>
+                    Interface
+                </h1>
+            </div>
+        </header>
+
+        <h2>
+            Para um sistema de interações ser desenvolvido vamos utilizar o método interface. Assim, evitaremos grandes linhas de códigos com if e else.
+        </h2>
+
+        <div class="space5">
+            <dialog open class="dialog1">
+                <pre>
+                   using System.Collections;
+                   using UnityEngine; 
+    
+                   public class interact : MonoBehaviour
+                   {
+                        // Start is called before the first frame update
+
+                        void Start()
+                        {
+
+                        }
+
+                        // Update is called once per frame
+                        void Update()
+                        {
+
+                        }
+                   }
+                </pre>
+            </dialog>
+        </div>
+
+        <h2>
+            Apague toda a classe e métodos originais do script(void start, void update, MonoBehaviour). Ademais, você irá escrever como na próxima imagem demonstra:
+        </h2>
+
+        
+        <div class="space6">
+            <dialog open class="dialog1">
+                <pre>
+                   using System.Collections;
+                   using UnityEngine; 
+    
+                   public interface Interacao
+                   {
+                        void interacao();
+                   }
+                </pre>
+            </dialog>
+        </div>
+
+        <h2>
+            Agora você deve acessar o código do objeto que deseja interagir na cena , por exemplo:
+        </h2>
+
+        
+        <div class="space7">
+            <dialog open class="dialog1">
+                <pre>
+                   using System.Collections;
+                   using UnityEngine; 
+    
+                   public class bau : MonoBehaviour
+                   {
+                        public void Abrir()
+                        {
+                            //Código para abrir o baú
+                        }
+                   }
+                </pre>
+            </dialog>
+        </div>
+
+        <h2>
+            em seguida adicione as seguintes alterações:
+        </h2>
+
+                
+        <div class="space8">
+            <dialog open class="dialog1">
+                <pre>
+                   using System.Collections;
+                   using UnityEngine; 
+    
+                   public class bau : MonoBehaviour, Interacao
+                   {
+
+                        public void interacao()
+                        {
+                            Abrir();
+                        }
+
+                        public void Abrir()
+                        {
+                            //Código para abrir o baú
+                        }
+                   }
+                </pre>
+            </dialog>
+        </div>
+
+        <h2>
+            agora no script do player você colocará isto:
+        </h2>
+
+        <div class="space9">
+            <dialog open class="dialog1">
+                <pre>
+                   using System.Collections;
+                   using UnityEngine; 
+    
+                   public class player : MonoBehaviour
+                   {
+                        private void OnCollisionEnter2D(Collision2D collision)
+                        {
+                            Interacao obj = collision.transform.GetComponent[Interacao]();
+                        }   
+                   }
+                </pre>
+            </dialog>
+        </div>
+
+        <h2>
+            Esta lógica pode ser adaptada para triggers, collision, Raycast e etc.
+        </h2>
+
+        <footer>
+
+            <div class="BackBtn" onclick="CloseTab()">
+                <p style="padding-top: 10px; padding-left: 22px; color: white; cursor: pointer;">
+                    Fechar
+                </p>
+            </div>
+                
+            <div class="final">
+                <p class="agradecimento">
+                    <br>
+                    <br>
+                    contato: albertofreconvick@gmail.com
+                    <br>
+                    <br>
+                    Unity Technologies: <a href="http://www.unity.com"> http://www.unity.com</a>
+                </p>
+            </div>
+            
+            <div class="linhaf">
+                <a href="https://www.youtube.com/channel/UCHhOXMZU8-D7vCjs1EfnkdQ" target="_blank" rel="noopener noreferrer">
+                    <img id="imglink" src="caminhosimg/basic ios 14 app icon pack.jpeg" alt="">
+                </a>
+                <a href="https://www.instagram.com/albertomartins86?igsh=MWJvOWVzZWp5eTFxNQ==" target="_blank" rel="noopener noreferrer">
+                    <img id="imglink" src="caminhosimg/Black instagram icon.jpeg" alt="">
+                </a>
+                <a href="https://www.linkedin.com/in/alberto-martins-a37341302/" target="_blank" rel="noopener noreferrer">
+                    <img id="imglink" src="caminhosimg/LinkedIn App Icon.jpeg" alt="">
+                </a>
+                <a href="https://www.tiktok.com/@albertohahakk" target="_blank" rel="noopener noreferrer">
+                    <img id="imglink" src="caminhosimg/b61ee311-01a4-400f-b3a9-e4f16b5fa1bd.jpeg" alt="">
+                </a>
+            </div>
+        </footer>
+
+        <script src="PageJS.js"></script>
+    </body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JA singleton</title>
+
+    <link rel="stylesheet" href="PageCodes.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+</head>
+    <body>
+        <div id="Nave">
+            <ul>
+                <li id="l1">
+                    <a href="hindex.html">LAR</a>
+                </li>
+                <li id="l2">
+                    <a href="ProjectsPage.html">PROJETOS</a>
+                </li>
+                <li id="l3">
+                    <a href="CodesPage.html">CÓDIGOS</a>
+                </li>
+            </ul>
+        </div>
+
+        <header>
+            <div class="cabeca">
+                <h1>
+                    Singleton
+                </h1>
+            </div>
+        </header>
+
+        <h2>
+            Para que vários códigos do seu jogo possam acessar classes específicas como por exemplo: save Game, load Game(dentre outras inúmeras funcionalidades) sem que haja conexão direta entre os respectivos códigos podemos usar um singleton. Enfim, crie um script e o nomeie-o como singleton(não é obrigatório) e apague todos os métodos originais como mostra a próxima imagem:
+        </h2>
+
+        <div class="space">
+            <dialog open class="dialog1">
+                <pre>
+                   using System.Collections;
+                   using UnityEngine; 
+    
+                   public class Singleton : MonoBehaviour
+                   {
+    
+                   }
+                </pre>
+            </dialog>
+        </div>
+        <h2>
+            Agora crie uma variável do tipo static do próprio script e em seguida criaremos um método awake que verificará se há este objeto em uma cena ou não, evitando erros futuros:
+        </h2>
+
+        <div class="space2">
+            <dialog open class="dialog1">
+                <pre>
+                   using System.Collections;
+                   using UnityEngine; 
+    
+                   public class Singleton : MonoBehaviour
+                   {
+                        public static Singleton instance;
+
+                        private void Awake()
+                        {
+
+                            DontDestroyOnLoad(this.gameObject);
+
+                            if (instance == null)
+                            {
+                                instance = this;
+                            }
+                            else
+                            {
+                                Destroy(this.gameObject);
+                            }
+                        }
+                   }
+                </pre>
+            </dialog>
+        </div>
+
+        <h2>
+            Agora crie um ou vários métodos que deseja ser acessado por qualquer outro script na cena
+        </h2>
+
+        
+        <div class="space3">
+            <dialog open class="dialog1">
+                <pre>
+                   using System.Collections;
+                   using UnityEngine; 
+    
+                   public class Singleton : MonoBehaviour
+                   {
+                        public static Singleton instance;
+
+                        private void Awake()
+                        {
+
+                            DontDestroyOnLoad(this.gameObject);
+
+                            if (instance == null)
+                            {
+                                instance = this;
+                            }
+                            else
+                            {
+                                Destroy(this.gameObject);
+                            }
+                        }
+
+                        //Exemplo de método para ser acessado
+
+                        public void Quit()
+                        {   
+                            Application.Quit();
+                        }
+                   }
+                </pre>
+            </dialog>
+        </div>
+
+        <h2>
+            Como exemplo, criei esse método que fecha a aplicação. Então, com o singleton pronto anexe ele a algum objeto na cena (obrigatório). E para invocar o método do singleton basta ir ao script desejado e escrever o'que mostra a próxima figura:
+        </h2>
+
+        <div class="space4">
+            <dialog open class="dialog1">
+                <pre>
+                    using System.Collections;
+                    using UnityEngine; 
+
+                    public class Game: MonoBehaviour
+                    {
+                        void Start()
+                        {  
+                            Singleton.instance.Quit();
+                        }
+                    }
+                </pre>
+            </dialog>
+        </div>
+
+        
+        <footer>
+
+            <div class="BackBtn" onclick="CloseTab()">
+                <p style="padding-top: 10px; padding-left: 22px; color: white; cursor: pointer;">
+                    Fechar
+                </p>
+            </div>
+                
+            <div class="final">
+                <p class="agradecimento">
+                    <br>
+                    <br>
+                    contato: albertofreconvick@gmail.com
+                    <br>
+                    <br>
+                    Unity Technologies: <a href="http://www.unity.com"> http://www.unity.com</a>
+                </p>
+            </div>
+            
+            <div class="linhaf">
+                <a href="https://www.youtube.com/channel/UCHhOXMZU8-D7vCjs1EfnkdQ" target="_blank" rel="noopener noreferrer">
+                    <img id="imglink" src="caminhosimg/basic ios 14 app icon pack.jpeg" alt="">
+                </a>
+                <a href="https://www.instagram.com/albertomartins86?igsh=MWJvOWVzZWp5eTFxNQ==" target="_blank" rel="noopener noreferrer">
+                    <img id="imglink" src="caminhosimg/Black instagram icon.jpeg" alt="">
+                </a>
+                <a href="https://www.linkedin.com/in/alberto-martins-a37341302/" target="_blank" rel="noopener noreferrer">
+                    <img id="imglink" src="caminhosimg/LinkedIn App Icon.jpeg" alt="">
+                </a>
+                <a href="https://www.tiktok.com/@albertohahakk" target="_blank" rel="noopener noreferrer">
+                    <img id="imglink" src="caminhosimg/b61ee311-01a4-400f-b3a9-e4f16b5fa1bd.jpeg" alt="">
+                </a>
+            </div>
+        </footer>
+
+        <script src="PageJS.js"></script>
+    </body>
+</html>

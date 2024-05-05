@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="PageCodes.css">
+        <title>JA namespace</title>
+    </head>
+    <body>
+        <div id="Nave">
+            <ul>
+                <li id="l1">
+                    <a href="hindex.html">LAR</a>
+                </li>
+                <li id="l2">
+                    <a href="ProjectsPage.html">PROJETOS</a>
+                </li>
+                <li id="l3">
+                    <a href="CodesPage.html">CÓDIGOS</a>
+                </li>
+            </ul>
+        </div>
+
+        
+        <header>
+            <div class="cabeca">
+                <h1>
+                    NameSpace
+                </h1>
+            </div>
+        </header>
+
+        <h2>
+            Esta função é utilizada para o agrupamento de classes em seus códigos servindo também para organização
+        </h2>
+
+        <h2>
+            não é algo muito usado no desenvolvimento de jogos com unity. Mas, com o nameSpace você poderá ter scripts com nomes iguais mas com funcionalidades diferentes
+        </h2>
+
+        <div class="space9">
+            <dialog open class="dialog1">
+                <pre>
+                   using System.Collections;
+                   using UnityEngine;
+
+                   nameSpace Player.Move
+                   {
+                        public class movimento : MonoBehaviour
+                        {
+                            // Seu código
+                        }
+                   }
+                </pre>
+            </dialog>
+        </div>
+
+        <h2>neste script vemos a class movimento dentro de uma nameSpace: Player.Move</h2>
+
+        <div class="space9">
+            <dialog open class="dialog1">
+                <pre>
+                   using System.Collections;
+                   using UnityEngine;
+
+                   nameSpace Enemy.Move
+                   {
+                        public class movimento : MonoBehaviour
+                        {
+                            // Seu código
+                        }
+                   }
+                </pre>
+            </dialog>
+        </div>
+
+        <h2>e neste outro script temos a mesma class mas um nome space diferente</h2>
+
+        <h2>
+            OBS: Os scripts criados para o player e o inimigo devem ficar em pastas distintas obrigatoriamente, mas o nameSpace evita erros no seu editor de código
+        </h2>
+
+        <h2>
+            OBS: Um nomeSpace não pode conter duas classes de nomes iguais, mas vc pode ter duas classes iguais em NameSpaces diferentes 
+        </h2>
+        
+        <footer>
+
+            <div class="BackBtn" onclick="CloseTab()">
+                <p style="padding-top: 10px; padding-left: 22px; color: white; cursor: pointer;">
+                    Fechar
+                </p>
+            </div>
+                
+            <div class="final">
+                <p class="agradecimento">
+                    <br>
+                    <br>
+                    contato: albertofreconvick@gmail.com
+                    <br>
+                    <br>
+                    Unity Technologies: <a href="http://www.unity.com"> http://www.unity.com</a>
+                </p>
+            </div>
+            
+            <div class="linhaf">
+                <a href="https://www.youtube.com/channel/UCHhOXMZU8-D7vCjs1EfnkdQ" target="_blank" rel="noopener noreferrer">
+                    <img id="imglink" src="caminhosimg/basic ios 14 app icon pack.jpeg" alt="">
+                </a>
+                <a href="https://www.instagram.com/albertomartins86?igsh=MWJvOWVzZWp5eTFxNQ==" target="_blank" rel="noopener noreferrer">
+                    <img id="imglink" src="caminhosimg/Black instagram icon.jpeg" alt="">
+                </a>
+                <a href="https://www.linkedin.com/in/alberto-martins-a37341302/" target="_blank" rel="noopener noreferrer">
+                    <img id="imglink" src="caminhosimg/LinkedIn App Icon.jpeg" alt="">
+                </a>
+                <a href="https://www.tiktok.com/@albertohahakk" target="_blank" rel="noopener noreferrer">
+                    <img id="imglink" src="caminhosimg/b61ee311-01a4-400f-b3a9-e4f16b5fa1bd.jpeg" alt="">
+                </a>
+            </div>
+        </footer>
+
+        <script src="PageJS.js"></script>
+    </body>
+</html>

@@ -1,0 +1,486 @@
+*{
+    margin: 0;
+}
+
+body{
+    background-image: url(images/back2.png);
+    background-size: 20%;
+    color: black;
+    font-family: "Pixelify Sans", sans-serif;
+    font-size: large;
+}
+
+#Nave {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #1b1b1b;
+    border-bottom: 2px solid;
+    border-color: white;
+    z-index: 5;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0px; 
+}
+
+#l1{
+    position: absolute;
+    top: 20px;
+    left: 40px;
+}
+#l2{
+    position: absolute;
+    top: 20px;
+    right: 135px;
+}
+#l3{
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.cabeca{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 100px;
+}
+
+h1{
+    text-align: center;
+    font-size: 45px;
+}
+
+p{
+    font-size: xx-large;
+}
+
+.PageGroup{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    margin-top: 50px;
+    background-color: transparent;
+    width: 100%;
+    height: 350px;
+}
+
+.folderLink1{
+
+    background-color: white;
+    width: 200px;
+    height: 200px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    box-shadow: 10px 10px 10px black;
+
+    transition: 0.5s;
+}
+
+.folderLink1:hover{
+
+    background-color: white;
+    width: 200px;
+    height: 200px;
+
+    margin-bottom: 10%;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    box-shadow: 10px 10px 10px black;
+
+    transition: 0.5s;
+}
+
+
+.folderLink2{
+    background-color: white;
+    width: 200px;
+    height: 200px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    box-shadow: 10px 10px 10px black;
+
+    transition: 0.5s;
+}
+
+
+.folderLink2:hover{
+    background-color: white;
+    width: 200px;
+    height: 200px;
+
+    border-radius: 10px;
+
+    margin-bottom: 10%;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    box-shadow: 10px 10px 10px black;
+
+    transition: 0.5s;
+}
+
+.folderLink3{
+    background-color: white;
+    width: 200px;
+    height: 200px;
+
+    border-radius: 10px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    box-shadow: 10px 10px 10px black;
+
+    transition: 0.5s;
+}
+
+.folderLink3:hover{
+    background-color: white;
+    width: 200px;
+    height: 200px;
+
+    border-radius: 10px;
+
+    margin-bottom: 10%;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    box-shadow: 10px 10px 10px black;
+
+    transition: 0.5s;
+}
+
+
+.Backfolder1{
+    position: absolute;
+
+    background-color: rgb(121, 30, 30);
+    width: 225px;
+    height: 200px;
+    z-index: -1;
+}
+
+.Backfolder2{
+    position: absolute;
+
+    right: 150px;
+
+    background-color: rgb(121, 30, 30);
+    width: 225px;
+    height: 200px;
+    z-index: -1;
+}
+
+.Backfolder3{
+    position: absolute;
+
+    left: 157px;
+
+    background-color: rgb(121, 30, 30);
+    width: 225px;
+    height: 200px;
+
+    z-index: -1;
+}
+
+.Frontfolder1{
+    position: absolute;
+
+    left: 157px;
+    top: 400px;
+
+    background-color: brown;
+    width: 225px;
+    height: 150px;
+
+    box-shadow: 10px 10px 10px black;
+
+    z-index: 1;
+}
+
+.Frontfolder2{
+    position: absolute;
+
+    top: 400px;
+
+    background-color: brown;
+    width: 225px;
+    height: 150px;
+
+    box-shadow: 10px 10px 10px black;
+
+    z-index: 1;
+}
+.Frontfolder3{
+    position: absolute;
+
+    right: 150px;
+    top: 400px;
+
+    background-color: brown;
+    width: 225px;
+    height: 150px;
+
+    box-shadow: 10px 10px 10px black;
+
+    z-index: 1;
+}
+
+.FrontfolderHand{
+    border-bottom: 25px solid brown;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	height: 0;
+	width: 50px;
+
+    margin-top: -25px;
+
+}
+
+#triangulo{
+    width: 0; 
+    height: 0; 
+    
+    border-left: 0px solid transparent;
+    border-right: 225px solid transparent;
+    border-bottom: 100px solid #5386E4;
+
+    margin-top: -85px;
+}
+
+.unity{
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50px;
+    margin-left: 5%;
+    margin-top: 50px;
+}
+
+.csharp{
+    width: 80px;
+    height: 80px;
+
+    border-radius: 50px;
+
+    margin-top: 50px;
+}
+
+.final{
+    display: flex;
+    justify-content: center;
+    height: 240px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-bottom: 2px solid;
+    border-color: white;
+}
+
+.agradecimento{
+    color: rgb(191, 173, 173);
+    text-align: center;
+    font-size: medium;
+    padding: 50px;
+}
+
+.linhaf{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    height: 100px;
+}
+
+#imglink{
+    padding: 20px;
+    width: 50px;
+    height: 50px;
+}
+
+.baga{
+    position: absolute;
+}
+
+.link{
+    background-color: blue;
+    width: 50px;
+    height: 50px;
+}
+
+/*
+    Parte do singleton
+*/
+
+h2{
+    text-align: left;
+
+    font-size: x-large;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+
+    background-color: rgb(66, 66, 119);
+    border-radius: 30px;
+
+    margin-left: 200px;
+    margin-right: 200px;
+
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    padding: 20px;
+
+    box-shadow: 10px 10px 10px black;
+}
+
+.space{
+    background-color: transparent;
+    width: 100%;
+    height: 250px;
+
+    display: flex;
+    align-items: center;
+}
+
+.space2{
+    background-color: transparent;
+    width: 100%;
+    height: 550px;
+
+    display: flex;
+    align-items: center;
+}
+
+.space3{
+    background-color: transparent;
+    width: 100%;
+    height: 650px;
+
+    display: flex;
+    align-items: center;
+}
+
+.space4{
+    background-color: transparent;
+    width: 100%;
+    height: 310px;
+
+    display: flex;
+    align-items: center;
+}
+
+.dialog1{
+    margin-left: 21%;
+    background-color: rgb(19, 19, 19);
+
+    width: 700px;}
+pre {
+    color: #ccc;
+    margin-left: -100px;
+    margin-top: 20px;
+}
+
+.BackBtn{
+
+    margin-top: 20px;
+    margin-left: 800px;
+    background-color: rgb(66, 66, 119);
+    width: 150px;
+    height: 60px;
+
+    border-radius: 30px;
+
+    box-shadow: 10px 10px 10px black;
+}
+
+/*
+    Parte do interface
+*/
+
+.space5{
+    background-color: transparent;
+    width: 100%;
+    height: 450px;
+
+    display: flex;
+    align-items: center;
+}
+
+.space6{
+    background-color: transparent;
+    width: 100%;
+    height: 250px;
+
+    display: flex;
+    align-items: center;
+}
+
+.space7{
+    background-color: transparent;
+    width: 100%;
+    height: 300px;
+
+    display: flex;
+    align-items: center;
+} 
+
+.space8{
+    background-color: transparent;
+    width: 100%;
+    height: 420px;
+
+    display: flex;
+    align-items: center;
+}
+
+.space9{
+    background-color: transparent;
+    width: 100%;
+    height: 310px;
+
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
