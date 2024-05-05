@@ -48,6 +48,11 @@ ul{
     right: 40px;
 }
 
+.IMGUC{
+    display:none;
+}
+
+
 .cabeca{
     color: white;
     display: flex;
@@ -185,6 +190,7 @@ p{
 
 
 .Backfolder1{
+    position: absolute;
     background-color: rgb(121, 30, 30);
     width: 225px;
     height: 200px;
