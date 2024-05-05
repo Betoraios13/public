@@ -185,8 +185,6 @@ p{
 
 
 .Backfolder1{
-    position: absolute;
-
     background-color: rgb(121, 30, 30);
     width: 225px;
     height: 200px;
@@ -474,13 +472,347 @@ pre {
     align-items: center;
 }
 
+@media only screen and (max-width: 600px) {
+    *{
+        margin: 0;
+    }
 
 
+    #Nave {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 60px;
+        background-color: #1b1b1b;
+        border-bottom: 2px solid;
+        border-color: white;
+        z-index: 3;
+    }
+    
+    a{
+        text-decoration: none;
+        color: white;
+    }
+    
+    ul{
+        list-style-type: none;
+        padding: 0px;
+        font-size: 17px; 
+    }
+    
+    #l1{
+        position: absolute;
+        top: 20px;
+        left: 40px;
+    }
+    #l2{
+        position: absolute;
+        top: 20px;
+        right: 105px;
+    }
+    #l3{
+        position: absolute;
+        top: 20px;
+        right: 15px;
+    }
 
+    .cabeca{
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+        margin-top: 100px;
+    }
+    
+    h1{
+        text-align: center;
+        font-size: 25px;
+    }
+    
+    p{
+        font-size: 17px;
+    }
 
+    .IMGUC{
+        display:flex;
+    }
 
+    .IMGUC img{
+        width: 60px;
+        height: 60px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 10px;
+        border-radius: 30%;
+    }
 
+    .PageGroup{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+        margin-top: 10px;
+        background-color: transparent;
+        width: 100%;
+        height: 350px;
+    }
 
+    .folderLink1{
 
+        background-color: white;
+        width: 200px;
+        height: 600px;
+    
+        border-radius: 10px;
 
+        margin-bottom: 10%;
+    
+        text-align: center;
+    
+        cursor: pointer;
+    
+        box-shadow: 10px 10px 10px black;
+    
+        transition: 0.5s;
+    }
+    
+    .folderLink1:hover{
+    
+        background-color: white;
+        width: 200px;
+        height: 600px;
+    
+        border-radius: 10px;
 
+        margin-bottom: 10%;
+    
+        text-align: center;
+    
+        cursor: pointer;
+    
+        box-shadow: 10px 10px 10px black;
+    
+        transition: 0.5s;
+    }
+
+    .Backfolder1{
+        position: absolute;
+        display: none;
+        background-color: rgb(121, 30, 30);
+        width: 125px;
+        height: 100px;
+        z-index: -1;
+    }
+
+    .Frontfolder1{
+        position: absolute;
+        display: none;
+    
+        left: 157px;
+        top: 400px;
+    
+        background-color: brown;
+        width: 125px;
+        height: 60px;
+    
+        box-shadow: 10px 10px 10px black;
+    
+        z-index: 1;
+    }
+
+    .folderLink2{
+        background-color: white;
+        width: 200px;
+        height: 600px;
+    
+        border-radius: 10px;
+
+        margin-bottom: 10%;
+    
+        text-align: center;
+    
+        cursor: pointer;
+    
+        box-shadow: 10px 10px 10px black;
+    
+        transition: 0.5s;
+    }
+    
+    
+    .folderLink2:hover{
+        background-color: white;
+        width: 200px;
+        height: 600px;
+    
+        border-radius: 10px;
+
+        margin-bottom: 10%;
+    
+        text-align: center;
+    
+        cursor: pointer;
+    
+        box-shadow: 10px 10px 10px black;
+    
+        transition: 0.5s;
+    }
+
+    .Backfolder2{    
+        position: absolute;
+        display: none;
+        right: 150px;
+    
+        background-color: rgb(121, 30, 30);
+        width: 125px;
+        height: 100px;
+        z-index: -1;
+    }
+
+    .Frontfolder2{
+        display: none;
+        position: absolute;
+    
+        top: 400px;
+    
+        background-color: brown;
+        width: 125px;
+        height: 100px;
+    
+        box-shadow: 10px 10px 10px black;
+    
+        z-index: 1;
+    }
+
+    .folderLink3{
+        background-color: white;
+        width: 200px;
+        height: 600px;
+    
+        border-radius: 10px;
+
+        margin-bottom: 10%;
+    
+        text-align: center;
+    
+        cursor: pointer;
+    
+        box-shadow: 10px 10px 10px black;
+    
+        transition: 0.5s;
+    }
+    
+    .folderLink3:hover{
+        background-color: white;
+        width: 200px;
+        height: 600px;
+    
+        border-radius: 10px;
+
+        margin-bottom: 10%;
+    
+        text-align: center;
+    
+        cursor: pointer;
+    
+        box-shadow: 10px 10px 10px black;
+    
+        transition: 0.5s;
+    }
+
+    .Backfolder3{
+        position: absolute;
+        display: none;
+    
+        left: 157px;
+    
+        background-color: rgb(121, 30, 30);
+        width: 125px;
+        height: 100px;
+    
+        z-index: -1;
+    }
+
+    .Frontfolder3{
+        display: none;
+        position: absolute;
+    
+        right: 150px;
+        top: 400px;
+    
+        background-color: brown;
+        width: 225px;
+        height: 150px;
+    
+        box-shadow: 10px 10px 10px black;
+    
+        z-index: 1;
+    }
+
+    #triangulo{
+        width: 0; 
+        height: 0; 
+        
+        border-left: 0px solid transparent;
+        border-right: 125px solid transparent;
+        border-bottom: 50px solid #5386E4;
+    
+        margin-top: 85px;
+    }
+
+    .unity{
+        display: none;
+        width: 40px;
+        height: 40px;
+    
+        border-radius: 50px;
+        margin-left: 5%;
+        margin-top: 15px;
+    }
+    
+    .csharp{
+        display: none;
+        width: 40px;
+        height: 40px;
+    
+        border-radius: 50px;
+    
+        margin-top: 15px;
+    }
+
+    .final{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 150px;
+        padding-top: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+        border-bottom: 2px solid;
+        border-color: white;
+    }
+    
+    .agradecimento{
+        color: rgb(191, 173, 173);
+        text-align: center;
+        font-size: 10px;
+        padding: 10px;
+        padding-bottom: 50px;
+    }
+    
+    .linhaf{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        background-color: black;
+        height: 100px;
+        margin-bottom: 0px;
+    }
+    
+    #imglink{
+        padding: 20px;
+        width: 50px;
+        height: 50px;
+    }
+}
