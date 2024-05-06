@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JA singleton</title>
 
-    <link rel="stylesheet" href="PageCodes.css">
+    <link rel="stylesheet" href="singleton.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
@@ -32,123 +32,155 @@
             </div>
         </header>
 
-        <h2>
-            Para que vários códigos do seu jogo possam acessar classes específicas como por exemplo: save Game, load Game(dentre outras inúmeras funcionalidades) sem que haja conexão direta entre os respectivos códigos podemos usar um singleton. Enfim, crie um script e o nomeie-o como singleton(não é obrigatório) e apague todos os métodos originais como mostra a próxima imagem:
-        </h2>
-
-        <div class="space">
-            <dialog open class="dialog1">
-                <pre>
-                   using System.Collections;
-                   using UnityEngine; 
-    
-                   public class Singleton : MonoBehaviour
-                   {
-    
-                   }
-                </pre>
-            </dialog>
+        <div class="conteudo">
+            <p class="text">
+                Para que vários códigos do seu jogo possam acessar classes específicas como por exemplo: save Game, load Game(dentre outras inúmeras funcionalidades) sem que haja conexão direta entre os respectivos códigos podemos usar um singleton. Enfim, crie um script e o nomeie-o como singleton(não é obrigatório) e apague todos os métodos originais como mostra a próxima imagem:
+            </p>
+            
         </div>
-        <h2>
-            Agora crie uma variável do tipo static do próprio script e em seguida criaremos um método awake que verificará se há este objeto em uma cena ou não, evitando erros futuros:
-        </h2>
 
-        <div class="space2">
-            <dialog open class="dialog1">
-                <pre>
-                   using System.Collections;
-                   using UnityEngine; 
-    
-                   public class Singleton : MonoBehaviour
-                   {
-                        public static Singleton instance;
+        <div class="code">
+            <span class="var">Using</span>System.Collections;
+            <br>
+            <span class="var">Using</span>System.Collections.Generic;
+            <br>
+            <span class="var">Using</span>UnityEngine;
+            <br>
+            <br>
+            <span class="var">public class</span>singleton : MonoBehaviuor
+            <br>
+            {
+            <br>
+            <br>
+            }
+        </div>
 
-                        private void Awake()
+        <div class="conteudo">
+            <p class="text">
+                Agora crie uma variável do tipo static do próprio script e em seguida criaremos um método awake que verificará se há este objeto em uma cena ou não, evitando erros futuros:
+            </p>
+        </div>
+
+        <div class="code">
+            <span class="var">Using</span>System.Collections;
+            <br>
+            <span class="var">Using</span>System.Collections.Generic;
+            <br>
+            <span class="var">Using</span>UnityEngine;
+            <br>
+            <br>
+            <span class="var">public class</span>singleton : MonoBehaviuor
+            <br>
+            {
+            <br>
+            <div class="dentro">
+                <span class="var">public static</span>singleton instancia;
+            </div>
+            <br>
+            <div class="dentro">
+                <span class="var">private void Awake</span>()<br>
+                {
+                    <div class="dentro">
+                        <span class="var2">DontDestroyOnLoad</span>(<span class="var1">this</span>.gameObject);
+                    </div>
+                    <br>
+                    <div class="dentro">
+                        <span class="var">if</span>(instancia != <span class="var">null</span>)<br>
                         {
-
-                            DontDestroyOnLoad(this.gameObject);
-
-                            if (instance == null)
-                            {
-                                instance = this;
-                            }
-                            else
-                            {
-                                Destroy(this.gameObject);
-                            }
+                            <div class="dentro">
+                                instancia = <span class="var">this</span>;
+                            </div>
                         }
-                   }
-                </pre>
-            </dialog>
-        </div>
-
-        <h2>
-            Agora crie um ou vários métodos que deseja ser acessado por qualquer outro script na cena
-        </h2>
-
-        
-        <div class="space3">
-            <dialog open class="dialog1">
-                <pre>
-                   using System.Collections;
-                   using UnityEngine; 
-    
-                   public class Singleton : MonoBehaviour
-                   {
-                        public static Singleton instance;
-
-                        private void Awake()
+                        <br>
+                        <span class="var">else</span><br>
                         {
-
-                            DontDestroyOnLoad(this.gameObject);
-
-                            if (instance == null)
-                            {
-                                instance = this;
-                            }
-                            else
-                            {
-                                Destroy(this.gameObject);
-                            }
+                            <div class="dentro"> Destroy(<span class="var1">this</span>.gameObject);</div>
                         }
-
-                        //Exemplo de método para ser acessado
-
-                        public void Quit()
-                        {   
-                            Application.Quit();
-                        }
-                   }
-                </pre>
-            </dialog>
+                    </div>
+                }
+            </div>
+            }
         </div>
 
-        <h2>
-            Como exemplo, criei esse método que fecha a aplicação. Então, com o singleton pronto anexe ele a algum objeto na cena (obrigatório). E para invocar o método do singleton basta ir ao script desejado e escrever o'que mostra a próxima figura:
-        </h2>
-
-        <div class="space4">
-            <dialog open class="dialog1">
-                <pre>
-                    using System.Collections;
-                    using UnityEngine; 
-
-                    public class Game: MonoBehaviour
-                    {
-                        void Start()
-                        {  
-                            Singleton.instance.Quit();
-                        }
-                    }
-                </pre>
-            </dialog>
+        <div class="conteudo">
+            <p class="text">
+                Agora crie um ou vários métodos que deseja ser acessado por qualquer outro script na cena
+            </p>
         </div>
 
+        <div class="code">
+            <span class="var">Using</span>System.Collections;
+            <br>
+            <span class="var">Using</span>System.Collections.Generic;
+            <br>
+            <span class="var">Using</span>UnityEngine;
+            <br>
+            <br>
+            <span class="var">public class</span>singleton : MonoBehaviuor
+            <br>
+            {
+            <br>
+            <div class="dentro">
+                <span class="var">public static</span>singleton instancia;
+            </div>
+            <br>
+            <div class="dentro">
+                <span class="var">private void Awake</span>()<br>
+                {
+                    <div class="dentro">
+                        <span class="var2">DontDestroyOnLoad</span>(<span class="var1">this</span>.gameObject);
+                    </div>
+                    <br>
+                    <div class="dentro">
+                        <span class="var">if</span>(instancia != <span class="var">null</span>)<br>
+                        {
+                            <div class="dentro">
+                                instancia = <span class="var">this</span>;
+                            </div>
+                        }
+                        <br>
+                        <span class="var">else</span><br>
+                        {
+                            <div class="dentro"> Destroy(<span class="var1">this</span>.gameObject);</div>
+                        }
+                    </div>
+                }<br>
+                <span class="var">public void <span class="var2">Quit</span></span>()<br>
+                {
+                    <br>
+                    <div class="dentro"><span class="var3">Application</span>.<span class="var2">Quit</span>();</div>
+                }
+            </div>
+            }
+        </div>
+
+        <div class="conteudo">
+            <p class="text">
+                Como exemplo, criei esse método que fecha a aplicação. Então, com o singleton pronto anexe ele a algum objeto na cena (obrigatório). E para invocar o método do singleton basta ir ao script desejado e escrever o'que mostra a próxima figura:
+            </p>
+        </div>
+
+        <div class="code">
+            <span class="var">Using</span>System.Collections;
+            <br>
+            <span class="var">Using</span>System.Collections.Generic;
+            <br>
+            <span class="var">Using</span>UnityEngine;
+            <br>
+            <br>
+            <span class="var">public class</span>exemplo : MonoBehaviuor
+            <br>
+            {
+                <div class="dentro">
+                    <span class="var3">singleton</span>.instacia.<span class="var2">Quit</span>();
+                </div>
+            }
+        </div>
         
         <footer>
 
             <div class="BackBtn" onclick="CloseTab()">
-                <p style="padding-top: 10px; padding-left: 22px; color: white; cursor: pointer;">
+                <p style="padding-top: 10px; padding-left: 22px; color: white; cursor: pointer;" class="btn">
                     Fechar
                 </p>
             </div>

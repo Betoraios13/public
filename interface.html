@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=], initial-scale=1.0">
     <title>JA Interface</title>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="PageCodes.css">
+    <link rel="stylesheet" href="singleton.css">
 </head>
     <body>
 
@@ -31,131 +31,172 @@
             </div>
         </header>
 
-        <h2>
-            Para um sistema de interações ser desenvolvido vamos utilizar o método interface. Assim, evitaremos grandes linhas de códigos com if e else.
-        </h2>
-
-        <div class="space5">
-            <dialog open class="dialog1">
-                <pre>
-                   using System.Collections;
-                   using UnityEngine; 
-    
-                   public class interact : MonoBehaviour
-                   {
-                        // Start is called before the first frame update
-
-                        void Start()
-                        {
-
-                        }
-
-                        // Update is called once per frame
-                        void Update()
-                        {
-
-                        }
-                   }
-                </pre>
-            </dialog>
+        <div class="conteudo">
+            <p class="text">
+                Para um sistema de interações ser desenvolvido vamos utilizar o método interface. Assim, evitaremos grandes linhas de códigos com if e else.
+            </p>           
         </div>
 
-        <h2>
-            Apague toda a classe e métodos originais do script(void start, void update, MonoBehaviour). Ademais, você irá escrever como na próxima imagem demonstra:
-        </h2>
-
-        
-        <div class="space6">
-            <dialog open class="dialog1">
-                <pre>
-                   using System.Collections;
-                   using UnityEngine; 
-    
-                   public interface Interacao
-                   {
-                        void interacao();
-                   }
-                </pre>
-            </dialog>
+        <div class="code">
+            <span class="var">Using</span>System.Collections;
+            <br>
+            <span class="var">Using</span>System.Collections.Generic;
+            <br>
+            <span class="var">Using</span>UnityEngine;
+            <br>
+            <br>
+            <span class="var">public class</span>interface: MonoBehaviuor
+            <br>
+            {
+                <div class="dentro">
+                    <span class="var">private void</span><span class="var2">Start</span>() <br>
+                    {
+                        <br>
+                        <br>
+                    }
+                </div>
+                <br>
+                <br>
+                <div class="dentro">
+                    <span class="var">private void</span><span class="var2">Update</span>() <br>
+                    {
+                        <br>
+                        <br>
+                    }
+                </div>
+            }
         </div>
 
-        <h2>
-            Agora você deve acessar o código do objeto que deseja interagir na cena , por exemplo:
-        </h2>
-
-        
-        <div class="space7">
-            <dialog open class="dialog1">
-                <pre>
-                   using System.Collections;
-                   using UnityEngine; 
-    
-                   public class bau : MonoBehaviour
-                   {
-                        public void Abrir()
-                        {
-                            //Código para abrir o baú
-                        }
-                   }
-                </pre>
-            </dialog>
+        <div class="conteudo">
+            <p class="text">
+                Apague toda a classe e métodos originais do script(void start, void update, MonoBehaviour). Ademais, você irá escrever como na próxima imagem demonstra:
+            </p>
         </div>
 
-        <h2>
-            em seguida adicione as seguintes alterações:
-        </h2>
+        <div class="code">
+            <span class="var">Using</span>System.Collections;
+            <br>
+            <span class="var">Using</span>System.Collections.Generic;
+            <br>
+            <span class="var">Using</span>UnityEngine;
+            <br>
+            <br>
+            <span class="var">public interface</span> <span class="var2">interacao</span>
+            <br>
+            {
+                <div class="dentro">
+                    <span class="var">void</span><span class="var2">interagir</span>();
 
-                
-        <div class="space8">
-            <dialog open class="dialog1">
-                <pre>
-                   using System.Collections;
-                   using UnityEngine; 
-    
-                   public class bau : MonoBehaviour, Interacao
-                   {
-
-                        public void interacao()
-                        {
-                            Abrir();
-                        }
-
-                        public void Abrir()
-                        {
-                            //Código para abrir o baú
-                        }
-                   }
-                </pre>
-            </dialog>
+                </div>
+            }
         </div>
 
-        <h2>
-            agora no script do player você colocará isto:
-        </h2>
-
-        <div class="space9">
-            <dialog open class="dialog1">
-                <pre>
-                   using System.Collections;
-                   using UnityEngine; 
-    
-                   public class player : MonoBehaviour
-                   {
-                        private void OnCollisionEnter2D(Collision2D collision)
-                        {
-                            Interacao obj = collision.transform.GetComponent[Interacao]();
-                        }   
-                   }
-                </pre>
-            </dialog>
+        <div class="conteudo">
+            <p class="text">
+                Agora você deve acessar o código do objeto que deseja interagir na cena , por exemplo:
+            </p>
         </div>
 
-        <h2>
-            Esta lógica pode ser adaptada para triggers, collision, Raycast e etc.
-        </h2>
+        <div class="code">
+            <span class="var">Using</span>System.Collections;
+            <br>
+            <span class="var">Using</span>System.Collections.Generic;
+            <br>
+            <span class="var">Using</span>UnityEngine;
+            <br>
+            <br>
+            <span class="var">public class</span>bau : MonoBehaviuor
+            <br>
+            {
+                <div class="dentro">
+                    <span class="var">public void</span><span class="var2">Abrir()</span> <br>
+                    {
+                        <div class="dentro">
+                            <span class="var4">//sua lógica para o objeto</span>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+
+        <div class="conteudo">
+            <p class="text">
+                em seguida adicione as seguintes alterações:
+            </p>
+        </div>
+
+        <div class="code">
+            <span class="var">Using</span>System.Collections;
+            <br>
+            <span class="var">Using</span>System.Collections.Generic;
+            <br>
+            <span class="var">Using</span>UnityEngine;
+            <br>
+            <br>
+            <span class="var">public class</span>bau : MonoBehaviuor ,<span class="var2">interacao</span>
+            <br>
+            {
+                <div class="dentro">
+                    <span class="var">public void</span><span class="var2">interagir</span>()<br>
+                    {
+                        <div class="dentro">
+                            <span class="var2">Abrir</span>();
+                        </div>
+                    }
+                </div>
+                <br>
+                <div class="dentro">
+                    <span class="var">public void</span><span class="var2">Abrir()</span> <br>
+                    {
+                        <div class="dentro">
+                            <span class="var4">//sua lógica para o objeto</span>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+
+        <div class="conteudo">
+            <p class="text">
+                agora no script do player você colocará isto:
+            </p>
+        </div>
+
+        <div class="code">
+            <span class="var">Using</span>System.Collections;
+            <br>
+            <span class="var">Using</span>System.Collections.Generic;
+            <br>
+            <span class="var">Using</span>UnityEngine;
+            <br>
+            <br>
+            <span class="var">public class</span>player : MonoBehaviuor
+            <br>
+            {
+                <div class="dentro">
+                    <span class="var">private void OnCollisionEnter</span>(<span class="var3">Collision </span> collision) <br>
+                    {
+                        <div class="dentro">
+                            <span class="var2">interacao</span> obj = collision.transform.<span class="var2">GetComponent</span><<span class="var2">interacao</span>>();
+                            <br>
+                            <br>
+                            <span class="var">if</span>(obj != <span class="var">null</span>) <span class="var">return;</span>
+                            <br>
+                            <br>
+                            obj.<span class="var2">interagir</span>();
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+
+        <div class="conteudo">
+            <p class="text">
+                Esta lógica pode ser adaptada para triggers, collision, Raycast e etc.
+            </p>
+        </div>
 
         <footer>
-
             <div class="BackBtn" onclick="CloseTab()">
                 <p style="padding-top: 10px; padding-left: 22px; color: white; cursor: pointer;">
                     Fechar

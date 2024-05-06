@@ -7,6 +7,7 @@ function OpenNewtab (url){
 
 function CloseTab(){
     const win = window.close()
+    win.close()
 }
 
 function OpenSingleton(){
