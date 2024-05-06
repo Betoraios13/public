@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JA singleton</title>
 
-    <link rel="stylesheet" href="singleton.css">
+    <link rel="stylesheet" href="code.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
 </head>
@@ -34,7 +34,8 @@
 
         <div class="conteudo">
             <p class="text">
-                Para que vários códigos do seu jogo possam acessar classes específicas como por exemplo: save Game, load Game(dentre outras inúmeras funcionalidades) sem que haja conexão direta entre os respectivos códigos podemos usar um singleton. Enfim, crie um script e o nomeie-o como singleton(não é obrigatório) e apague todos os métodos originais como mostra a próxima imagem:
+                
+Para permitir que vários trechos de código do seu jogo acessem classes específicas, como por exemplo: salvar Jogo, carregar Jogo (entre outras funcionalidades diversas), sem estabelecer uma conexão direta entre os códigos correspondentes, podemos utilizar um padrão Singleton. Assim, criei um script e nomeei-o como "Singleton" (embora o nome seja opcional), e eliminei todos os métodos originais conforme mostrado na próxima imagem.
             </p>
             
         </div>
@@ -57,7 +58,7 @@
 
         <div class="conteudo">
             <p class="text">
-                Agora crie uma variável do tipo static do próprio script e em seguida criaremos um método awake que verificará se há este objeto em uma cena ou não, evitando erros futuros:
+                Agora, crie uma variável estática dentro do próprio script e, em seguida, implementaremos um método chamado awake, que verificará se há uma instância desse objeto em uma cena específica ou não, prevenindo possíveis erros no futuro.
             </p>
         </div>
 
@@ -156,7 +157,7 @@
 
         <div class="conteudo">
             <p class="text">
-                Como exemplo, criei esse método que fecha a aplicação. Então, com o singleton pronto anexe ele a algum objeto na cena (obrigatório). E para invocar o método do singleton basta ir ao script desejado e escrever o'que mostra a próxima figura:
+                Como exemplo, criei este método que fecha a aplicação. Com o Singleton preparado, anexe-o a algum objeto na cena (o que é obrigatório). Para invocar o método do Singleton, basta ir ao script desejado e adicionar o que é mostrado na próxima figura.
             </p>
         </div>
 
