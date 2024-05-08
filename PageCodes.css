@@ -71,6 +71,21 @@ p{
     font-size: xx-large;
 }
 
+.IMGUC{
+    display:flex;
+    justify-content: center;
+}
+
+.IMGUC img{
+    width: 60px;
+    height: 60px;
+    margin-top: 60px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    border-radius: 30%;
+}
+
+
 .PageGroup{
     display: flex;
     justify-content: space-evenly;
@@ -83,7 +98,6 @@ p{
 }
 
 .folderLink1{
-
     background-color: white;
     width: 200px;
     height: 200px;
@@ -118,7 +132,6 @@ p{
     transition: 0.5s;
 }
 
-
 .folderLink2{
     background-color: white;
     width: 200px;
@@ -134,7 +147,6 @@ p{
 
     transition: 0.5s;
 }
-
 
 .folderLink2:hover{
     background-color: white;
@@ -186,121 +198,6 @@ p{
     box-shadow: 10px 10px 10px black;
 
     transition: 0.5s;
-}
-
-
-.Backfolder1{
-    position: absolute;
-    background-color: rgb(121, 30, 30);
-    width: 225px;
-    height: 200px;
-    z-index: -1;
-}
-
-.Backfolder2{
-    position: absolute;
-
-    right: 150px;
-
-    background-color: rgb(121, 30, 30);
-    width: 225px;
-    height: 200px;
-    z-index: -1;
-}
-
-.Backfolder3{
-    position: absolute;
-
-    left: 157px;
-
-    background-color: rgb(121, 30, 30);
-    width: 225px;
-    height: 200px;
-
-    z-index: -1;
-}
-
-.Frontfolder1{
-    position: absolute;
-
-    left: 157px;
-    top: 400px;
-
-    background-color: brown;
-    width: 225px;
-    height: 150px;
-
-    box-shadow: 10px 10px 10px black;
-
-    z-index: 1;
-}
-
-.Frontfolder2{
-    position: absolute;
-
-    top: 400px;
-
-    background-color: brown;
-    width: 225px;
-    height: 150px;
-
-    box-shadow: 10px 10px 10px black;
-
-    z-index: 1;
-}
-.Frontfolder3{
-    position: absolute;
-
-    right: 150px;
-    top: 400px;
-
-    background-color: brown;
-    width: 225px;
-    height: 150px;
-
-    box-shadow: 10px 10px 10px black;
-
-    z-index: 1;
-}
-
-.FrontfolderHand{
-    border-bottom: 25px solid brown;
-	border-left: 25px solid transparent;
-	border-right: 25px solid transparent;
-	height: 0;
-	width: 50px;
-
-    margin-top: -25px;
-
-}
-
-#triangulo{
-    width: 0; 
-    height: 0; 
-    
-    border-left: 0px solid transparent;
-    border-right: 225px solid transparent;
-    border-bottom: 100px solid #5386E4;
-
-    margin-top: -85px;
-}
-
-.unity{
-    width: 80px;
-    height: 80px;
-
-    border-radius: 50px;
-    margin-left: 5%;
-    margin-top: 50px;
-}
-
-.csharp{
-    width: 80px;
-    height: 80px;
-
-    border-radius: 50px;
-
-    margin-top: 50px;
 }
 
 .final{
@@ -470,31 +367,6 @@ p{
         transition: 0.5s;
     }
 
-    .Backfolder1{
-        position: absolute;
-        display: none;
-        background-color: rgb(121, 30, 30);
-        width: 125px;
-        height: 100px;
-        z-index: -1;
-    }
-
-    .Frontfolder1{
-        position: absolute;
-        display: none;
-    
-        left: 157px;
-        top: 400px;
-    
-        background-color: brown;
-        width: 125px;
-        height: 60px;
-    
-        box-shadow: 10px 10px 10px black;
-    
-        z-index: 1;
-    }
-
     .folderLink2{
         background-color: white;
         width: 200px;
@@ -532,32 +404,6 @@ p{
         transition: 0.5s;
     }
 
-    .Backfolder2{    
-        position: absolute;
-        display: none;
-        right: 150px;
-    
-        background-color: rgb(121, 30, 30);
-        width: 125px;
-        height: 100px;
-        z-index: -1;
-    }
-
-    .Frontfolder2{
-        display: none;
-        position: absolute;
-    
-        top: 400px;
-    
-        background-color: brown;
-        width: 125px;
-        height: 100px;
-    
-        box-shadow: 10px 10px 10px black;
-    
-        z-index: 1;
-    }
-
     .folderLink3{
         background-color: white;
         width: 200px;
@@ -592,66 +438,6 @@ p{
         box-shadow: 10px 10px 10px black;
     
         transition: 0.5s;
-    }
-
-    .Backfolder3{
-        position: absolute;
-        display: none;
-    
-        left: 157px;
-    
-        background-color: rgb(121, 30, 30);
-        width: 125px;
-        height: 100px;
-    
-        z-index: -1;
-    }
-
-    .Frontfolder3{
-        display: none;
-        position: absolute;
-    
-        right: 150px;
-        top: 400px;
-    
-        background-color: brown;
-        width: 225px;
-        height: 150px;
-    
-        box-shadow: 10px 10px 10px black;
-    
-        z-index: 1;
-    }
-
-    #triangulo{
-        width: 0; 
-        height: 0; 
-        
-        border-left: 0px solid transparent;
-        border-right: 125px solid transparent;
-        border-bottom: 50px solid #5386E4;
-    
-        margin-top: 85px;
-    }
-
-    .unity{
-        display: none;
-        width: 40px;
-        height: 40px;
-    
-        border-radius: 50px;
-        margin-left: 5%;
-        margin-top: 15px;
-    }
-    
-    .csharp{
-        display: none;
-        width: 40px;
-        height: 40px;
-    
-        border-radius: 50px;
-    
-        margin-top: 15px;
     }
 
     .final{
